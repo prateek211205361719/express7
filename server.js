@@ -31,6 +31,11 @@ app.get('/about', function(req, res){
         title:'About page'
     });
 });
+app.get('/user/:id', function(req, res){
+   res.render('user.hbs', {
+        title:req.params.id,
+    });
+});
 app.listen(port, function(){
     console.log('------running on port----'+port);
 });
